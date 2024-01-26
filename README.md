@@ -32,11 +32,14 @@ output : 한국어 문장 (1만여건)
 ### 데이터 설명
 
 **train.csv**
-<p align='center'><img src="assets/src01.PNG" width="540"></p>
+<p align='center'><img src="assets/src03.PNG" width="540"></p>
+<p align='center'><img src="assets/src04.PNG" width="540"></p>
 
 **test.csv**
+<p align='center'><img src="assets/src05.PNG" width="300"></p>
 
 **sample_submission.csv** 
+<p align='center'><img src="assets/src06.PNG" width="300"></p>
 
 <br>
 
@@ -44,10 +47,10 @@ output : 한국어 문장 (1만여건)
 
 - 평가지표: BLEU Score (sacrebleu, Bi-Lingual Evaluation Understudy)
 
-$$ \textmd{Unigram \ Precision} \ P = \frac{m}{w_t} \ \ \ ⟶ \textrm{n-gram \ 정밀도} $$
+$$ \textmd{Unigram Precision} \ P = \frac{m}{w_t} \ \ \ ⟶ \textrm{n-gram 정밀도} $$
 $$ \textrm{where} \begin{cases} m: \textrm{number of tokens both in reference and predition} \\ w_t: \textrm{number of tokens in prediction} \end{cases} $$
 
-$$ \textrm{Brevity penalty }p \begin{cases} 1 \ \ \ \ \ \ \ \ \ \ \ \ \textrm{ if } c > r  \\ e^{(1-\frac{r}{c})} \ \ \ \ \textrm{ if } c ≦ r \end{cases} ⟶ \textrm{길이 패널티} $$  
+$$ \textrm{Brevity penalty }p \begin{cases} 1 \ \ \ \ \ \ \ \ \ \ \ \textrm{ if } c > r  \\  e^{(1-\frac{r}{c})} \ \ \ \textrm{ if } c ≦ r \end{cases} ⟶ \textrm{길이 패널티} $$  
 
 $$ ⟹ \textrm{BLUE} = p ⋅ e^{\Sigma^n_{n=1}(\frac{1}{N}\log⋅P_n)}\textrm{ where } N = 4 $$
 
