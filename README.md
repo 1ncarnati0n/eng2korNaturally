@@ -32,13 +32,17 @@ output : 한국어 문장 (1만여건)
 ### 데이터 설명
 
 **train.csv**
+
 <p align='center'><img src="assets/src03.png" width="540"></p>
+
 <p align='center'><img src="assets/src04.png" width="540"></p>
 
 **test.csv**
+
 <p align='center'><img src="assets/src05.png" width="300"></p>
 
 **sample_submission.csv** 
+
 <p align='center'><img src="assets/src06.png" width="300"></p>
 
 <br>
