@@ -33,17 +33,17 @@ output : 한국어 문장 (1만여건)
 
 **train.csv**
 
-<p align='center'><img src="assets/src03.png" width="540"></p>
+<p align='center'><img src="assets/src03.png" width="720"></p>
 
-<p align='center'><img src="assets/src04.png" width="540"></p>
+<p align='center'><img src="assets/src04.png" width="720"></p>
 
 **test.csv**
 
-<p align='center'><img src="assets/src05.png" width="300"></p>
+<p align='center'><img src="assets/src05.png" width="380"></p>
 
 **sample_submission.csv** 
 
-<p align='center'><img src="assets/src06.png" width="300"></p>
+<p align='center'><img src="assets/src06.png" width="380"></p>
 
 <br>
 
@@ -51,12 +51,30 @@ output : 한국어 문장 (1만여건)
 
 - 평가지표: BLEU Score (sacrebleu, Bi-Lingual Evaluation Understudy)
 
+<br>
+
 $$ \textrm{Unigram Precision} \ P = \frac{m}{w_t} \ \ \ ⟶ \textrm{n-gram 정밀도} $$
-$$ \textrm{where} \begin{cases} m: \textrm{number of tokens both in reference and predition} \\ w_t: \textrm{number of tokens in prediction} \end{cases} $$
 
-$$ \textrm{Brevity penalty }p \begin{cases} 1 \ \ \ \ \ \ \ \ \ \ \ \textrm{ if } c > r  \\  e^{(1-\frac{r}{c})} \ \ \ \textrm{ if } c ≦ r \end{cases} ⟶ \textrm{길이 패널티} $$  
+<br>
 
-$$ ⟹ \textrm{BLUE} = p ⋅ e^{\Sigma^n_{n=1}(\frac{1}{N}\log⋅P_n)}\textrm{ where } N = 4 $$
+$$ \textrm{where} 
+\begin{cases} 
+m: \textrm{number of tokens both in reference and predition} \\ 
+w_t: \textrm{number of tokens in prediction} 
+\end{cases} $$
+
+<br>
+
+$$ \textrm{Brevity penalty }p 
+
+\begin{cases} 
+1 \ \ \ \ \ \ \ \ \ \ \ \textrm{ if } \ c > r \\\\ 
+e^{(1-\frac{r}{c})} \ \ \ \textrm{ if } \ c ≦ r 
+\end{cases} ⟶ \textrm{길이 패널티} $$  
+
+<br>
+
+$$ ⟹ \textrm{BLUE} = p⋅e^{\Sigma^n_{n=1}(\frac{1}{N}\log⋅P_n)}\textrm{ where } N = 4 $$
 
 <br>
 
