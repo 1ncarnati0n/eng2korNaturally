@@ -61,16 +61,19 @@ $$ \textrm{where}
 \begin{cases} 
 m: \textrm{number of tokens both in reference and predition} \\ 
 w_t: \textrm{number of tokens in prediction} 
-\end{cases} $$
+\end{cases} 
+$$
 
 <br>
 
-$$ \textrm{Brevity penalty }p 
-
+$$ 
+\textrm{Brevity penalty }p 
 \begin{cases} 
-1 \ \ \ \ \ \ \ \ \ \ \ \textrm{ if } \ c > r \\\\ 
+1 \ \ \ \ \ \ \ \ \ \ \ \textrm{ if } \ c > r  \\
 e^{(1-\frac{r}{c})} \ \ \ \textrm{ if } \ c ≦ r 
-\end{cases} ⟶ \textrm{길이 패널티} $$  
+\end{cases} 
+⟶ \textrm{길이 패널티} 
+$$  
 
 <br>
 
